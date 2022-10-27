@@ -18,4 +18,3 @@ class Vertice:
     def show_neighbours(self):
         print(self.id,self.neighbour)
         
-
