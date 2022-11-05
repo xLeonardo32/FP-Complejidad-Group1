@@ -1,0 +1,21 @@
+Tabla 1
+travelCode,userCode,from,to,flightType,price,time,distance,agency,date
+0,0,Recife (PE),Florianopolis (SC),firstClass,1434.38,1.76,676.53,FlyingDrops,09/26/2019
+0,0,Florianopolis (SC),Recife (PE),firstClass,1292.29,1.76,676.53,FlyingDrops,09/30/2019
+1,0,Brasilia (DF),Florianopolis (SC),firstClass,1487.52,1.66,637.56,CloudFy,10/03/2019
+1,0,Florianopolis (SC),Brasilia (DF),firstClass,1127.36,1.66,637.56,CloudFy,10/04/2019
+2,0,Aracaju (SE),Salvador (BH),firstClass,1684.05,2.16,830.86,CloudFy,10/10/2019
+2,0,Salvador (BH),Aracaju (SE),firstClass,1531.92,2.16,830.86,CloudFy,10/12/2019
+3,0,Aracaju (SE),Campo Grande (MS),economic,743.54,1.69,650.1,Rainbow,10/17/2019
+3,0,Campo Grande (MS),Aracaju (SE),economic,877.56,1.69,650.1,Rainbow,10/20/2019
+4,0,Recife (PE),Florianopolis (SC),economic,803.39,1.76,676.53,Rainbow,10/24/2019
+4,0,Florianopolis (SC),Recife (PE),economic,695.3,1.76,676.53,Rainbow,10/26/2019
+5,0,Brasilia (DF),Aracaju (SE),firstClass,1287.52,1.11,425.98,FlyingDrops,10/31/2019
+5,0,Aracaju (SE),Brasilia (DF),firstClass,898.04,1.11,425.98,FlyingDrops,11/01/2019
+6,0,Recife (PE),Florianopolis (SC),premium,1070.54,1.76,676.53,Rainbow,11/07/2019
+6,0,Florianopolis (SC),Recife (PE),premium,1013.4,1.76,676.53,Rainbow,11/10/2019
+7,0,Aracaju (SE),Salvador (BH),economic,964.83,2.16,830.86,CloudFy,11/14/2019
+7,0,Salvador (BH),Aracaju (SE),economic,811.73,2.16,830.86,CloudFy,11/17/2019
+8,0,Recife (PE),Sao Paulo (SP),economic,513.06,1.26,486.52,CloudFy,11/21/2019
+8,0,Sao Paulo (SP),Recife (PE),economic,829.91,1.26,486.52,CloudFy,11/24/2019
+9,0,Brasilia (DF),Campo Grande (MS),economic,583.6,0.72,277.7,CloudFy,11/28/2019
