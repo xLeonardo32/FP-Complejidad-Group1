@@ -8,7 +8,8 @@ class Grafo:
     def agregar_arista(self,arista:Arista):
         if arista not in self.__aristas:
             self.__aristas.append(arista)
-        
+        else:
+            print('No se agrego porque son aristas iguales')
     
     def __str__(self) -> str:
         return str([str(arista) for arista in self.__aristas])

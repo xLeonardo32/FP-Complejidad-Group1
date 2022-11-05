@@ -9,6 +9,11 @@ class Arista:
     def get_par(self) -> list:
       return self.__par
     
+    def __eq__(self, __o: object) -> bool:
+      if self.get_par()[0] == __o.get_par()[0] and self.get_par()[1] == __o.get_par()[1]:
+        return True
+      return False
+
     def __str__(self) -> str:
       return f'Nodo: {self.get_par()[0]} -> Nodo: {self.get_par()[1]}'
     
