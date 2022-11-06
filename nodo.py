@@ -13,6 +13,8 @@ class Nodo:
    def __str__(self) -> str:
       return str(self.__dato)
    
+   def __hash__(self) -> int:
+      return hash(self.dato)
 
    
    
