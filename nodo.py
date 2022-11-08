@@ -1,5 +1,5 @@
 class Nodo:
-   def __init__(self,element) -> None:
+   def __init__(self,element = None) -> None:
       self.__dato = element
    
    @property

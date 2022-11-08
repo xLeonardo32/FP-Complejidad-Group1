@@ -35,6 +35,7 @@ class Grafo:
             self.__listady[nodo1] = [[nodo2]]
     
     def print_list_ady(self):
+        print('Entro')
         self.__listady.clear()
         self.get_list_ady()
         

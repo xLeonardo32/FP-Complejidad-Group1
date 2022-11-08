@@ -2,8 +2,9 @@ from nodo import Nodo
 from Vuelo import Vuelo
 from arista import Arista
 from grafo import Grafo
-
+from programControler import ProgramControler
 if __name__ == '__main__':
+    """
     nodo1 = Nodo(Vuelo(0,0,'Recife (PE)','Florianopolis (SC)','firstClass',1434.38,1.76,676.53,'FlyingDrops','09/26/2019'))
     nodo2 = Nodo(Vuelo(0,0,'Florianopolis (SC)','Recife (PE)','firstClass',1292.29,1.76,676.53,'FlyingDrops','09/30/2019'))
     
@@ -21,7 +22,9 @@ if __name__ == '__main__':
     g.get_list_ady()
     
     g.print_list_ady()
-       
-    
+    """   
+    program = ProgramControler("VuelosDatos.csv")
+    program.g.print_list_ady()
+    #Mejorar las impresiones de la lista de adyacencia
    # print(nodo1.dato) 
     

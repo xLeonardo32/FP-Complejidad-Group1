@@ -1,4 +1,5 @@
 from nodo import Nodo
+from abc import ABC
 class Arista:
     def __init__(self,nodo1:Nodo,nodo2:Nodo) -> None:
         self.__par = [nodo1,nodo2]
@@ -40,7 +41,12 @@ class AristaNoDirigida(Arista):
   def __str__(self) -> str:
      return super().__str__()
 
-
+class AristaBuilder(ABC):
+  @staticmethod
+  def create(nodo1:Nodo,nodo2:Nodo)->Arista:
+    if nodo1.dato.travel_code == nodo2.dato.travel_code:
+      return Arista(nodo1,nodo2)
+  
 
    
   
