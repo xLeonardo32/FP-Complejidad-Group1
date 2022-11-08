@@ -6,7 +6,10 @@ class Grafo:
         self.__aristas = []
         self.__listady = dict() #Lista de adyacencia
         
-        
+    @property
+    def aristas(self):
+        return self.__aristas
+     
     def agregar_arista(self,arista:Arista):
         if arista not in self.__aristas:
             self.__aristas.append(arista)
@@ -30,12 +33,12 @@ class Grafo:
             
     def agregar_ady(self,nodo1:Nodo,nodo2:Nodo):
         if nodo1 in self.__listady:
+            print('Si esta')
             self.__listady[nodo1].append([nodo2])
         else:
             self.__listady[nodo1] = [[nodo2]]
     
     def print_list_ady(self):
-        print('Entro')
         self.__listady.clear()
         self.get_list_ady()
         

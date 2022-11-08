@@ -25,6 +25,7 @@ if __name__ == '__main__':
     """   
     program = ProgramControler("VuelosDatos.csv")
     program.g.print_list_ady()
+    #print(program.g.aristas)
     #Mejorar las impresiones de la lista de adyacencia
    # print(nodo1.dato) 
     
