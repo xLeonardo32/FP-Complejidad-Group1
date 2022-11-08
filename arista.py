@@ -1,8 +1,16 @@
 from nodo import Nodo
+from Vuelo import Vuelo
 from abc import ABC
 class Arista:
     def __init__(self,nodo1:Nodo,nodo2:Nodo) -> None:
         self.__par = [nodo1,nodo2]
+        self.vuelos = []
+      
+    def get_vuelos(self):
+      return self.vuelos 
+        
+    def agregar_vuelo(self,vuelo:Vuelo):
+      self.vuelos.append(vuelo)    
     
     def es_dirigido(self) -> bool:
       return False

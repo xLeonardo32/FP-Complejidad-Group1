@@ -35,5 +35,5 @@ class Vuelo :
                 'Agencia: ' + str(self.distance) + '\n' + \
                 'Fecha: ' + str(self.date)
         """
-        return str(self.t_from)
+        return str(self.flight_type)
     

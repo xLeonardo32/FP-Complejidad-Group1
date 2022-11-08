@@ -17,7 +17,9 @@ class ProgramControler:
             nodo2 = Nodo()
             #Mejorar el if
             for row in csv_reader:
-                vuelo = VueloBuilder.of_list(row)
+                """
+                if line_read >=2 :
+                    vuelo = VueloBuilder.of_list(row)
                 if line_read % 2 == 0 and line_read >= 2:
                     nodo1 = Nodo(vuelo.t_from)
                     line_read = line_read + 1
@@ -25,10 +27,19 @@ class ProgramControler:
                 elif line_read % 2 != 0 and line_read >=2:
                     #Agregar datos en el grafo 
                     #Validar si el travel code es igual
-                    nodo2 = Nodo(vuelo.t_from)
-                    self.g.agregar_arista(Arista(nodo1,nodo2))
                     
+                    nodo2 = Nodo(vuelo.t_from)
+                    print(nodo1,nodo2)
+                    self.g.agregar_arista(Arista(nodo1,nodo2),vuelo)
+                """
+                if line_read >= 2:
+                    vuelo = VueloBuilder.of_list(row)
+                    nodo1 = Nodo(vuelo.t_from)
+                    nodo2 = Nodo(vuelo.t_to)
+                    self.g.agregar_arista(Arista(nodo1,nodo2),vuelo)
+                      
                 line_read = line_read + 1 
 
-    
+
+
     
