@@ -1,5 +1,5 @@
 from vueloBuilder import VueloBuilder
-from arista import AristaBuilder
+from arista import AristaBuilder,Arista
 from grafo import Grafo
 from nodo import Nodo
 import csv
@@ -17,15 +17,16 @@ class ProgramControler:
             nodo2 = Nodo()
             #Mejorar el if
             for row in csv_reader:
+                vuelo = VueloBuilder.of_list(row)
                 if line_read % 2 == 0 and line_read >= 2:
-                    nodo1 = Nodo(VueloBuilder.of_list(row))
+                    nodo1 = Nodo(vuelo.t_from)
                     line_read = line_read + 1
                     continue
                 elif line_read % 2 != 0 and line_read >=2:
                     #Agregar datos en el grafo 
                     #Validar si el travel code es igual
-                    nodo2 = Nodo(VueloBuilder.of_list(row))
-                    self.g.agregar_arista(AristaBuilder.create(nodo1,nodo2))
+                    nodo2 = Nodo(vuelo.t_from)
+                    self.g.agregar_arista(Arista(nodo1,nodo2))
                     
                 line_read = line_read + 1 
 
