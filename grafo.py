@@ -14,11 +14,12 @@ class Grafo:
     def print_aristas(self):
         for arista in self.aristas:
             print(arista)
+
     def print_vuelos(self):
         for arista in self.aristas:
-            print(len(arista.get_vuelos()))
+            print(arista, arista.print_vuelos())
              
-    def agregar_arista(self,arista:Arista,vuelo: Vuelo):
+    def agregar_arista(self,arista:Arista,vuelo:Vuelo):
         if arista not in self.__aristas:
             #print(arista)
             arista.agregar_vuelo(vuelo)
