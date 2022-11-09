@@ -17,14 +17,20 @@ class Grafo:
 
     def print_vuelos(self):
         for arista in self.aristas:
-            print(arista, arista.print_vuelos())
-             
+            #print(arista)
+            arista.print_vuelos()
+
     def agregar_arista(self,arista:Arista,vuelo:Vuelo):
         if arista not in self.__aristas:
             #print(arista)
             arista.agregar_vuelo(vuelo)
             self.__aristas.append(arista)
         else:
+            """
+            print('No se agrego, pero se agrego el vuelo')
+            print(arista)
+            print(vuelo)
+            """
             self.aristas[self.aristas.index(arista)].agregar_vuelo(vuelo)
             #arista.agregar_vuelo(vuelo)
             #print(arista)

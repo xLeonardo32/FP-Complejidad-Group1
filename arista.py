@@ -11,7 +11,7 @@ class Arista:
     
     def print_vuelos(self):
       for vuelo in self.vuelos:
-        print(vuelo)   
+        print(vuelo)
         
     def agregar_vuelo(self,vuelo:Vuelo):
       self.vuelos.append(vuelo)    

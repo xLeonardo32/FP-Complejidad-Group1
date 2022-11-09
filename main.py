@@ -25,7 +25,7 @@ if __name__ == '__main__':
     """   
     program = ProgramControler("VuelosDatos.csv")
     #program.g.print_list_ady()
-    program.g.print_aristas()
+    #program.g.print_aristas()
     program.g.print_vuelos()
     #program.g.print_aristas()
     #print(program.g.aristas)
