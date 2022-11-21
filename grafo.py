@@ -78,7 +78,7 @@ class Grafo:
                 print(value[0])
     
     def dibujar(self):
-        nx.draw(self.grafico,with_labels=True,node_color='cyan')
+        nx.draw_random(self.grafico,with_labels=True,node_color='cyan')
             
                  
             
