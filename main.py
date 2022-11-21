@@ -3,6 +3,7 @@ from Vuelo import Vuelo
 from arista import Arista
 from grafo import Grafo
 from programControler import ProgramControler
+import matplotlib.pyplot as plt
 if __name__ == '__main__':
     """
     nodo1 = Nodo(Vuelo(0,0,'Recife (PE)','Florianopolis (SC)','firstClass',1434.38,1.76,676.53,'FlyingDrops','09/26/2019'))
@@ -23,10 +24,13 @@ if __name__ == '__main__':
     
     g.print_list_ady()
     """   
-    program = ProgramControler("VuelosDatos.csv")
+    program = ProgramControler("nuevosVuelos.csv")
     #program.g.print_list_ady()
     #program.g.print_aristas()
     program.g.print_vuelos()
+    program.g.print_list_ady()
+    program.mostrar_grafo()
+    plt.show()
     #program.g.print_aristas()
     #print(program.g.aristas)
     #Mejorar las impresiones de la lista de adyacencia

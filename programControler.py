@@ -5,8 +5,10 @@ from nodo import Nodo
 import csv
 class ProgramControler:
     def __init__(self,datos:str) -> None:
+        self.i_c = 0
         self.g = Grafo() #Instansiacion del grafo
         self.leer_datos(datos)
+        
         
 
     def leer_datos(self,datos:str)-> None:
@@ -37,9 +39,11 @@ class ProgramControler:
                     nodo1 = Nodo(vuelo.t_from)
                     nodo2 = Nodo(vuelo.t_to)
                     self.g.agregar_arista(Arista(nodo1,nodo2),vuelo)
+                    print(row)
                       
                 line_read = line_read + 1 
 
-
+    def mostrar_grafo(self):
+        self.g.dibujar()
 
     

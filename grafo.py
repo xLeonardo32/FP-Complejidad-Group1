@@ -1,11 +1,13 @@
 from arista import Arista
 from nodo import Nodo
 from Vuelo import Vuelo
+import networkx as nx
 
 class Grafo:
     def __init__(self) -> None:
         self.__aristas = []
         self.__listady = dict() #Lista de adyacencia
+        self.grafico = nx.DiGraph()
         
     @property
     def aristas(self):
@@ -18,6 +20,7 @@ class Grafo:
     def print_vuelos(self):
         for arista in self.aristas:
             #print(arista)
+            print(arista)
             arista.print_vuelos()
 
     def agregar_arista(self,arista:Arista,vuelo:Vuelo):
@@ -35,6 +38,13 @@ class Grafo:
             #arista.agregar_vuelo(vuelo)
             #print(arista)
             #print('No se agrego porque son aristas iguales')
+       
+        self.grafico.add_node(arista.get_nodo1())
+        self.grafico.add_node(arista.get_nodo2())
+        self.grafico.add_edge(arista.get_nodo1(),arista.get_nodo2(),weight=10)
+
+        
+        
     
     def eliminar_arista(self,arista:Arista):
         self.__aristas.remove(arista)
@@ -66,6 +76,9 @@ class Grafo:
             print(key.dato,'--->',end="")
             for value in self.__listady[key]:
                 print(value[0])
+    
+    def dibujar(self):
+        nx.draw(self.grafico,with_labels=True,node_color='cyan')
             
                  
             
